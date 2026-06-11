@@ -1,0 +1,39 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+class Mobile
+{
+    char brand[20];
+    float price;
+    public:
+    Mobile()
+    {
+        strcpy(brand,"Samsung");
+        price=10000;
+    }
+    Mobile(char b[],float p)
+    {
+        strcpy(brand,b);
+        price=p;
+    }
+    Mobile(const Mobile &m)
+    {
+        strcpy(brand,m.brand);
+        price=m.price;
+    }
+    void display()
+    {
+        cout<<"Brand:"<<brand<<endl;
+        cout<<"Price:"<<price<<endl;
+    }
+};
+int main()
+{
+    Mobile m1;
+    Mobile m2((char*)"Apple",70000);
+    Mobile m3=m2;
+    m1.display();
+    m2.display();
+    m3.display();
+    return 0;
+}
