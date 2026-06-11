@@ -1,0 +1,41 @@
+Output:
+
+Construct
+Construct
+Copy
+Add
+Construct
+Destruct
+Destruct
+Destruct
+Destruct
+
+d2 is passed by value
+Copy constructor called
+Prints Copy
+
+Inside operator:
+
+Prints Add
+Returns Demo(x+d.x)
+Temporary object created
+Prints Construct
+
+After operator finishes:
+
+Parameter d destroyed
+Prints Destruct
+
+At program end:
+
+d3 destroyed
+d2 destroyed
+d1 destroyed
+Total Temporary Objects
+
+During d1+d2:
+
+Copy of d2 (parameter d)
+Returned temporary object
+
+Total temporary objects = 2
